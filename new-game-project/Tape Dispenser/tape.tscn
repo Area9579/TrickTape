@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3l6601abffpf"]
+
+[ext_resource type="Texture2D" uid="uid://ol2rtp8fxsnv" path="res://Tape Dispenser/tape.png" id="1_5hw1b"]
+
+[node name="Tape" type="Decal" unique_id=1039016639]
+size = Vector3(1, 0.08, 1)
+texture_albedo = ExtResource("1_5hw1b")
+upper_fade = 0.0
+lower_fade = 0.0
+distance_fade_begin = 2.0
+distance_fade_length = 1.0

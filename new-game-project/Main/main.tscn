@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ekvt1amehlo"]
+
+[ext_resource type="PackedScene" uid="uid://byw16m8d51wrn" path="res://Package Spinner/spinner.tscn" id="1_yh5la"]
+[ext_resource type="PackedScene" uid="uid://c280qqcd8o0j2" path="res://Tape Dispenser/tape_dispenser.tscn" id="2_qvhan"]
+[ext_resource type="PackedScene" uid="uid://bbnhk1576kmjl" path="res://Package/Package.tscn" id="3_eunhr"]
+
+[node name="Main" type="Node3D" unique_id=2065298038]
+
+[node name="Spinner" parent="." unique_id=1415344120 node_paths=PackedStringArray("package") instance=ExtResource("1_yh5la")]
+package = NodePath("Package")
+
+[node name="Package" parent="Spinner" unique_id=612296517 instance=ExtResource("3_eunhr")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=481585423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
+
+[node name="TapeDispenser" parent="." unique_id=100595719 node_paths=PackedStringArray("package") instance=ExtResource("2_qvhan")]
+package = NodePath("../Spinner/Package")
