@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dnkr64duo8g2u" path="res://Coverage Bar/coverage_bar.gd" id="1_d47a3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d47a3"]
+bg_color = Color(0.5646203, 0.5727526, 0.82196534, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
 [node name="CoverageBar" type="Control" unique_id=1594946723]
 layout_mode = 3
 anchors_preset = 15
@@ -16,7 +24,6 @@ script = ExtResource("1_d47a3")
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=909633461]
 offset_left = 49.0
 offset_top = 41.0
-offset_right = 251.0
+offset_right = 239.0
 offset_bottom = 68.0
-theme_override_colors/font_color = Color(0.9089782, 1, 0.60226816, 1)
-theme_override_colors/font_outline_color = Color(0.11239535, 0, 0.6963427, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_d47a3")
