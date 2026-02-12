@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c280qqcd8o0j2" path="res://Tape Dispenser/tape_dispenser.tscn" id="2_qvhan"]
 [ext_resource type="PackedScene" uid="uid://bbnhk1576kmjl" path="res://Package/Package.tscn" id="3_eunhr"]
 [ext_resource type="PackedScene" uid="uid://d2owqylhcsx4k" path="res://Coverage Bar/CoverageBar.tscn" id="4_eunhr"]
+[ext_resource type="PackedScene" uid="uid://cllha1cynus8d" path="res://Timer/Timer.tscn" id="6_liyct"]
 
 [node name="Main" type="Node3D" unique_id=2065298038]
 script = ExtResource("1_k3v36")
@@ -21,3 +22,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
 package = NodePath("../Spinner/Package")
 
 [node name="CoverageBar" parent="." unique_id=1594946723 instance=ExtResource("4_eunhr")]
+
+[node name="Timer" parent="." unique_id=2120766430 instance=ExtResource("6_liyct")]
