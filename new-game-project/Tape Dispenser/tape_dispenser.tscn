@@ -6,10 +6,14 @@
 script = ExtResource("1_rb1y6")
 
 [node name="TapeLocation" type="Marker3D" parent="." unique_id=1778593674]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.6468096, 0, -0.012956381)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.011103988, 0, -0.012956381)
 
 [node name="Timer" type="Timer" parent="." unique_id=1685211061]
 wait_time = 0.05
 autostart = true
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=180362318]
+transform = Transform3D(-0.015079089, 0.9998863, 0, -0.9998863, -0.015079089, 0, 0, 0, 1, 0, 0, 0)
+debug_shape_thickness = 3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

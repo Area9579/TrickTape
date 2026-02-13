@@ -1,10 +1,13 @@
-extends Node3D
+class_name TapeDispenser extends Node3D
 
 const TAPE = preload("uid://3l6601abffpf")
 @onready var tape_location: Marker3D = $TapeLocation
 var new_tape : Decal
 
 @export var package : Package
+
+#func _ready() -> void:
+	#look_at(Vector3.ZERO)
 
 func _on_timer_timeout() -> void:
 	new_tape = TAPE.instantiate() as Decal

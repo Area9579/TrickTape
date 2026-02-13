@@ -9,8 +9,9 @@
 [node name="Main" type="Node3D" unique_id=2065298038]
 script = ExtResource("1_k3v36")
 
-[node name="Spinner" parent="." unique_id=1415344120 node_paths=PackedStringArray("package") instance=ExtResource("1_yh5la")]
+[node name="Spinner" parent="." unique_id=1415344120 node_paths=PackedStringArray("package", "tape_dispenser") instance=ExtResource("1_yh5la")]
 package = NodePath("Package")
+tape_dispenser = NodePath("../TapeDispenser")
 
 [node name="Package" parent="Spinner" unique_id=612296517 instance=ExtResource("3_eunhr")]
 
@@ -18,6 +19,7 @@ package = NodePath("Package")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
 
 [node name="TapeDispenser" parent="." unique_id=100595719 node_paths=PackedStringArray("package") instance=ExtResource("2_qvhan")]
+transform = Transform3D(0.71726334, 0, -0.69680214, 0, 1, 0, 0.69680214, 0, 0.71726334, 0.65735817, 0, 0.717903)
 package = NodePath("../Spinner/Package")
 
 [node name="CoverageBar" parent="." unique_id=1594946723 instance=ExtResource("4_eunhr")]

@@ -1,11 +1,11 @@
 extends Node3D
 
 const MOUSE_SENSITIVITY : float = 0.002
-const COVERAGE_INCREMENT_AMOUNT : float = 0.01
+const COVERAGE_INCREMENT_AMOUNT : float = 1.0
 @onready var package_center_target: Marker3D = $PackageCenterTarget
 
 @export var package : Package
-
+@export var tape_dispenser : TapeDispenser
 var coverage : float
 
 func _input(event: InputEvent) -> void:
@@ -17,10 +17,13 @@ func _input(event: InputEvent) -> void:
 	drag(event)
 
 func drag(event: InputEventMouseMotion):
-	coverage += COVERAGE_INCREMENT_AMOUNT * abs(event.relative.length())
+	var target_input_dir : Vector2 = Vector2(tape_dispenser.global_position.x, tape_dispenser.global_position.y)
+	var spin_effectiveness : float = abs(target_input_dir.normalized().dot(event.relative.normalized()))
+	print("input_sameness: ", spin_effectiveness)
+	coverage += COVERAGE_INCREMENT_AMOUNT * spin_effectiveness
 	package.next_rotation_dir = event.relative
 	coverage = clamp(coverage, 0, 100)
-	print(coverage)
+
 
 
 func _on_child_entered_tree(node: Node) -> void:
