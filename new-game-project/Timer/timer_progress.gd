@@ -11,4 +11,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	progress_bar.value = timer.time_left
-	print(timer.time_left)
+	#print(timer.time_left)
