@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://c280qqcd8o0j2" path="res://Tape Dispenser/tape_dispenser.tscn" id="2_qvhan"]
 [ext_resource type="PackedScene" uid="uid://bbnhk1576kmjl" path="res://Package/Package.tscn" id="3_eunhr"]
 [ext_resource type="PackedScene" uid="uid://d2owqylhcsx4k" path="res://Coverage Bar/CoverageBar.tscn" id="4_eunhr"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="6_ib3t1"]
+[ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Effect Components/node2D_effect.gd" id="6_liyct"]
+[ext_resource type="Script" uid="uid://dm0xhf56n1d3g" path="res://Win Lose UI/win_lose_sprite.gd" id="7_f6fdm"]
 
 [node name="Main" type="Node3D" unique_id=2065298038]
 script = ExtResource("1_k3v36")
@@ -21,3 +24,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
 package = NodePath("../Spinner/Package")
 
 [node name="CoverageBar" parent="." unique_id=1594946723 instance=ExtResource("4_eunhr")]
+
+[node name="WinLoseSprite" type="Sprite2D" parent="." unique_id=1399323876]
+position = Vector2(572, 321)
+scale = Vector2(2.65, 2.65)
+texture = ExtResource("6_ib3t1")
+script = ExtResource("7_f6fdm")
+
+[node name="Node2DEffect" type="Node" parent="WinLoseSprite" unique_id=195570983 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("6_liyct")
+affected_node = NodePath("..")
+rotation_amount = 0.0
+scale_amount = Vector2(1, 1)
+trans_type = 9
+ease_type = 1
+tween_duration = 0.3
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
