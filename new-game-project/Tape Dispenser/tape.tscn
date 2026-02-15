@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ol2rtp8fxsnv" path="res://Tape Dispenser/tape.png" id="1_5hw1b"]
 
 [node name="Tape" type="Decal" unique_id=1039016639]
-size = Vector3(1, 0.08, 1)
+size = Vector3(2, 0.4, 1.2)
 texture_albedo = ExtResource("1_5hw1b")
 upper_fade = 0.0
 lower_fade = 0.0

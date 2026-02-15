@@ -1,14 +1,18 @@
 extends Node3D
 
-@onready var coverage_bar: Control = $CoverageBar
-@onready var spinner: Node3D = $Spinner
+@onready var coverage_bar: Control = $CoverageBar as Control
+@onready var spinner: Spinner = $Spinner as Spinner
 
-# Called when the node enters the scene tree for the first time.
+var wrapped_packages_num : int = 0
+
 func _ready() -> void:
 	coverage_bar.spinner = spinner
-	
+	spinner.package_finished_wrapping.connect(_on_package_finished_wrapping)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_package_finished_wrapping():
+	wrapped_packages_num += 1
+	if wrapped_packages_num == 3:
+		# TODO: Connect to framework to cycle to next screen
+		print('win game')
+		#get_tree().quit()
