@@ -4,6 +4,8 @@ class_name Spinner extends Node3D
 const MOUSE_SENSITIVITY : float = 0.002
 const COVERAGE_INCREMENT_AMOUNT : float = 0.1
 
+signal package_finished_wrapping
+
 @onready var package_center_target: Marker3D = $PackageCenterTarget
 
 @export var package : Package
@@ -31,10 +33,14 @@ func drag(event: InputEventMouseMotion):
 	coverage = clamp(coverage, 0, 100)
 	if coverage == 100:
 		coverage = 0
+		go_to_next_package()
+
+func go_to_next_package():
+	# TODO: Spawn new package
+	package_finished_wrapping.emit()
 
 func _on_child_entered_tree(node: Node) -> void:
 	if node is not Package:
 		return
 	print("Setting ", node, "'s target to ", package_center_target)
 	node.target = package_center_target
-	

@@ -15,10 +15,6 @@ run/main_scene="uid://ekvt1amehlo"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-SignalBus="*uid://qkibf1i1v7t1"
-
 [input]
 
 drag={
