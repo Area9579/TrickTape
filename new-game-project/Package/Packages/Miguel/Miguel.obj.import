@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b4kretndepl6x"
+path="res://.godot/imported/Miguel.obj-ae692b3502467af69650bd70e589bc65.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Miguel.obj-ae692b3502467af69650bd70e589bc65.mesh"]
+
+source_file="res://Package/Packages/Miguel/Miguel.obj"
+dest_files=["res://.godot/imported/Miguel.obj-ae692b3502467af69650bd70e589bc65.mesh", "res://.godot/imported/Miguel.obj-ae692b3502467af69650bd70e589bc65.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
