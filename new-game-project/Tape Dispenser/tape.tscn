@@ -9,3 +9,4 @@ upper_fade = 0.0
 lower_fade = 0.0
 distance_fade_begin = 2.0
 distance_fade_length = 1.0
+cull_mask = 524289
