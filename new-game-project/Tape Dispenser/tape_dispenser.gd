@@ -3,7 +3,9 @@ class_name TapeDispenser extends Node3D
 const TAPE = preload("uid://3l6601abffpf")
 @onready var tape_location: Marker3D = $TapeLocation
 var new_tape : Decal
-@onready var sprite_3d: Sprite3D = $Sprite3D
+#@onready var dispenser: Sprite3D = $dispenser
+#@onready var tape: Sprite3D = $dispenser/tape
+
 
 var package : Package
 

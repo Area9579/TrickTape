@@ -1,14 +1,23 @@
 extends TextureProgressBar
 
-@onready var timer: Timer = $".."
+#@onready var timer: Timer = $".."
 @onready var progress_bar: TextureProgressBar = $"."
+@onready var timer: Timer = $Timer
 
-# Called when the node enters the scene tree for the first time.
+signal player_died
+
+const PACKAGE_TIME : float = 5.0
+
 func _ready() -> void:
-	pass # Replace with function body.
+	timer.start(PACKAGE_TIME)
+	max_value = PACKAGE_TIME
 
+func start():
+	timer.start(PACKAGE_TIME)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	progress_bar.value = timer.time_left
-	#print(timer.time_left)
+
+func _on_timer_timeout() -> void:
+	timer.start(PACKAGE_TIME)
+	player_died.emit()

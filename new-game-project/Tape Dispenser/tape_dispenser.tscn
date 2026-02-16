@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dlvwtqnbdtiqi" path="res://Tape Dispenser/tape_dispenser.gd" id="1_rb1y6"]
 [ext_resource type="Texture2D" uid="uid://bh0q5saffsr46" path="res://Tape Dispenser/Assets/band.png" id="2_4o3lq"]
-[ext_resource type="Texture2D" uid="uid://bybjw7g5qi4k" path="res://Tape Dispenser/Assets/TapeDispenser.png" id="3_agw1a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agw1a"]
 albedo_texture = ExtResource("2_4o3lq")
@@ -58,6 +57,7 @@ autostart = true
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=180362318]
 transform = Transform3D(-0.015079089, 0.9998863, 0, -0.9998863, -0.015079089, 0, 0, 0, 1, 0.36391246, 0, 0)
+visible = false
 target_position = Vector3(0, -2, 0)
 debug_shape_thickness = 3
 
@@ -66,11 +66,5 @@ transform = Transform3D(-0.1573426, 8.960373, 1.3717431e-06, 8.8832655, 0.155988
 visible = false
 material_override = SubResource("StandardMaterial3D_agw1a")
 mesh = SubResource("ArrayMesh_pq53g")
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=178094166]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19377956, 0, 0)
-layers = 2
-texture_filter = 0
-texture = ExtResource("3_agw1a")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
