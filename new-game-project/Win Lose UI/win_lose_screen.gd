@@ -33,7 +33,7 @@ class_name WinLoseScreen extends Control
 
 #endregion
 
-
+signal lost_anim_finished
 
 func won() -> void:
 	await get_tree().create_timer(1).timeout
@@ -66,3 +66,7 @@ func lost() -> void:
 	await grow_background.tween.finished
 	lose_sprite.show()
 	grow_lose.do_tween_from_values(Vector2.ZERO, 0, Vector2.ZERO)
+	
+	await grow_lose.tween.finished
+	await get_tree().create_timer(1.0).timeout
+	lost_anim_finished.emit()
