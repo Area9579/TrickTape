@@ -1,6 +1,6 @@
 @abstract class_name TweenEffect extends Node
 ## The TweenEffect class is an abstract class meant to be used to build out other
-## effect classes using tweens. [br\]
+## effect classes using tweens. [br]
 ## This class contains all of the information relating to the tween including
 ## transitions, easing, and the tween's duration.
 
@@ -26,6 +26,11 @@ func reset_tween():
 	tween = create_tween().set_ease(ease_type).set_trans(trans_type).set_parallel(true)
 
 
+@abstract func do_tween() -> void
 ## This function calls the specific application of the tween, which must be defined
 ## in any subclass of [TweenEffect].
-@abstract func do_tween() -> void
+
+
+@abstract func do_tween_from_values() -> void
+	## This function takes starting parameters, then call [method do_tween].
+	## Parameters this function takes must be individually defined.
