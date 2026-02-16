@@ -21,5 +21,6 @@ func decrease_opacity():
 	tape.modulate.a -= 0.1
 	tape.modulate.a = clamp(tape.modulate.a, 0, 1)
 
+
 #func _process(_delta: float) -> void:
 	#tween.tween_property(tape, "scale", )

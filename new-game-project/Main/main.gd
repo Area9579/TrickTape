@@ -3,6 +3,7 @@ extends Node3D
 @onready var coverage_bar: Control = $CoverageBar as Control
 @onready var spinner: Spinner = $Spinner as Spinner
 @onready var timer: TextureProgressBar = $Timer
+@onready var tape_dispenser_positioner: Node3D = $TapeDispenserPositioner
 
 var wrapped_packages_num : int = 0
 
@@ -12,6 +13,7 @@ func _ready() -> void:
 	coverage_bar.spinner = spinner
 	spinner.package_finished_wrapping.connect(_on_package_finished_wrapping)
 	timer.player_died.connect(_on_player_died)
+	spinner.package_finished_wrapping.connect(tape_dispenser_positioner.set_new_dispenser_location)
 
 func _on_player_died():
 	game_was_lost.emit()
