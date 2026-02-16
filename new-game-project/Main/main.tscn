@@ -26,3 +26,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
 [node name="TapeDispenserPositioner" parent="." unique_id=1603529063 instance=ExtResource("6_ib3t1")]
 
 [editable path="TapeDispenserPositioner"]
+[editable path="TapeDispenserPositioner/VisualsContainer/Up"]
+[editable path="TapeDispenserPositioner/VisualsContainer/Down"]

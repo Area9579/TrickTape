@@ -4,6 +4,8 @@ extends Node3D
 @onready var right: Marker3D = $Right
 @onready var up: Marker3D = $Up
 @onready var down: Marker3D = $Down
+@onready var visuals_container: Node = $VisualsContainer
+@onready var dispenser_visuals : Array[Node] = visuals_container.get_children()
 
 @onready var positions : Array[Marker3D] = [left, right, up, down]
 
@@ -14,7 +16,14 @@ func _ready() -> void:
 	set_new_dispenser_location()
 
 func set_new_dispenser_location():
-	tape_dispenser.reparent(positions.pop_front(), false)
+	var next_position : Marker3D = positions.pop_front()
+	tape_dispenser.reparent(next_position, false)
+	for sprite in dispenser_visuals:
+		if sprite.name == next_position.name:
+			sprite.visible = true
+		else:
+			sprite.visible = false
+
 
 func _physics_process(_delta: float) -> void:
 	if positions.is_empty():
