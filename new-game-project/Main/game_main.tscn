@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cn4d1ulss6go1" path="res://Background/parallax_background.tscn" id="2_me4ut"]
 [ext_resource type="PackedScene" uid="uid://8rq22ypuy8ne" path="res://Win Lose UI/win_lose_screen.tscn" id="3_pqao7"]
 [ext_resource type="PackedScene" uid="uid://dolswgag5s7d7" path="res://IntroductionScreen/introduction_screen.tscn" id="4_csl6d"]
+[ext_resource type="Texture2D" uid="uid://dlh4rs6f6pjeo" path="res://Background/Assets/blood_splatter_2.png" id="6_csl6d"]
+[ext_resource type="Texture2D" uid="uid://c5ru800johnfv" path="res://Background/Assets/blood_splatter_1.png" id="7_b2pfy"]
 
 [node name="GameMain" type="Node" unique_id=1179777259]
 script = ExtResource("1_me4ut")
@@ -49,3 +51,42 @@ size_flags_vertical = 4
 [node name="Win_Lose Screen" parent="." unique_id=1294610884 instance=ExtResource("3_pqao7")]
 
 [node name="IntroductionScreen" parent="." unique_id=102741142 instance=ExtResource("4_csl6d")]
+
+[node name="Blood" type="Control" parent="." unique_id=445502411]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopBlood" type="Control" parent="Blood" unique_id=2055968932]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Blood1" type="Sprite2D" parent="Blood/TopBlood" unique_id=1623135038]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("6_csl6d")
+centered = false
+
+[node name="BottomBlood" type="Control" parent="Blood" unique_id=503469221]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Blood2" type="Sprite2D" parent="Blood/BottomBlood" unique_id=2144078572]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("7_b2pfy")
+offset = Vector2(-13, -11)

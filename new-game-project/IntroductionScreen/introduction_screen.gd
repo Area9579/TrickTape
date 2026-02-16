@@ -15,6 +15,8 @@ class_name IntroductionScreen extends Control
 @onready var drag_drag_out: Node2DEffect = $Drag/DragOut
 @onready var drag_player: AnimationPlayer = $DragPlayer
 
+@onready var turn_right: Node2DEffect = $Drag/TurnRight
+@onready var turn_left: Node2DEffect = $Drag/TurnLeft
 
 func _ready() -> void:
 	get_tree().paused = true
@@ -39,4 +41,5 @@ func show_introduction() -> void:
 	
 	await drag_drag_out.tween.finished
 	get_tree().paused = false
+	drag_player.stop()
 	queue_free()

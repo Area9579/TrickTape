@@ -1,7 +1,6 @@
 extends Sprite3D
 @onready var tape: Sprite3D = $tape
 
-@onready var tween : Tween = get_tree().create_tween()
 
 func _input(event: InputEvent) -> void:
 	if event is not InputEventMouseMotion:
