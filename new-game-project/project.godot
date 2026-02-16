@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Trick Tape"
-run/main_scene="uid://bacfuumfu1hnl"
+run/main_scene="uid://dr5mvquwuwk6a"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -48,9 +48,9 @@ points = PackedVector3Array(-0.5, 0.24100316, -0.55899686, 0.09291057, 1.4, 1.17
 script = ExtResource("1_ckk3d")
 
 [node name="Skull" type="MeshInstance3D" parent="." unique_id=1760975937]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.57201827, 0)
+transform = Transform3D(0.46, 0, 0, 0, 0.46, 0, 0, 0, 0.46, 0, -0.57201827, 0)
 mesh = SubResource("ArrayMesh_mt2lj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=620536755]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.57201827, 0)
+transform = Transform3D(0.46, 0, 0, 0, 0.46, 0, 0, 0, 0.46, 0, -0.57201827, 0)
 shape = SubResource("ConvexPolygonShape3D_ikhry")

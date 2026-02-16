@@ -3,6 +3,9 @@ extends Sprite3D
 
 
 func _input(event: InputEvent) -> void:
+	if !visible:
+		decrease_opacity()
+		return
 	if event is not InputEventMouseMotion:
 		decrease_opacity()
 		return

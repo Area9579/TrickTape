@@ -1,6 +1,7 @@
 extends Control
 
-@onready var progress_bar: ProgressBar = $CanvasLayer/ProgressBar
+#@onready var progress_bar: ProgressBar = $CanvasLayer/ProgressBar
+@onready var progress_bar: TextureProgressBar = $CanvasLayer/ProgressBar
 
 var spinner : Node
 
