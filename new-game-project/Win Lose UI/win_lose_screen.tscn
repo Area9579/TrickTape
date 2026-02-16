@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://8rq22ypuy8ne"]
+
+[ext_resource type="Texture2D" uid="uid://httejcqk3k6r" path="res://Win Lose UI/Assets/win.png" id="1_d347c"]
+[ext_resource type="Script" uid="uid://cf2fdwwca2xlb" path="res://Win Lose UI/win_lose_screen.gd" id="1_te5r4"]
+[ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Effect Components/node2D_effect.gd" id="3_aabum"]
+[ext_resource type="Texture2D" uid="uid://il68s75rgxnp" path="res://Win Lose UI/Assets/cloud.png" id="4_5sqgv"]
+[ext_resource type="Texture2D" uid="uid://bqtwca7juvwei" path="res://Win Lose UI/Assets/whimsy.png" id="5_te5r4"]
+
+[node name="Win_Lose Screen" type="Control" unique_id=1294610884]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_te5r4")
+
+[node name="WinSprite" type="Sprite2D" parent="." unique_id=1954329577]
+visible = false
+z_index = 2
+scale = Vector2(5, 5)
+texture = ExtResource("1_d347c")
+
+[node name="StampEffect" type="Node" parent="WinSprite" unique_id=1013310819 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+rotation_amount = 0.0
+scale_amount = Vector2(5, 5)
+trans_type = 9
+ease_type = 1
+tween_duration = 0.6
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="WinBackground" type="Sprite2D" parent="." unique_id=545296662]
+visible = false
+z_index = 1
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("4_5sqgv")
+
+[node name="StampEffect" type="Node" parent="WinBackground" unique_id=1052679362 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+rotation_amount = 0.0
+scale_amount = Vector2(5, 5)
+trans_type = 9
+ease_type = 1
+tween_duration = 0.6
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="Whimsy" type="Sprite2D" parent="." unique_id=1458027421]
+visible = false
+z_index = 2
+scale = Vector2(5, 5)
+texture = ExtResource("5_te5r4")
+
+[node name="StampEffect" type="Node" parent="Whimsy" unique_id=558363419 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+rotation_amount = 0.0
+scale_amount = Vector2(5, 5)
+trans_type = 9
+ease_type = 1
+tween_duration = 0.6
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"

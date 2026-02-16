@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d2owqylhcsx4k" path="res://Coverage Bar/CoverageBar.tscn" id="4_eunhr"]
 [ext_resource type="PackedScene" uid="uid://bwv3l5cugrxkf" path="res://Tape Dispenser/TapeDispenserPositioner.tscn" id="6_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://cllha1cynus8d" path="res://Timer/Timer.tscn" id="6_liyct"]
+[ext_resource type="PackedScene" uid="uid://8rq22ypuy8ne" path="res://Win Lose UI/win_lose_screen.tscn" id="7_ib3t1"]
 
 [node name="Main" type="Node3D" unique_id=2065298038]
 script = ExtResource("1_k3v36")
@@ -24,5 +25,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
 [node name="Timer" parent="." unique_id=2120766430 instance=ExtResource("6_liyct")]
 
 [node name="TapeDispenserPositioner" parent="." unique_id=1603529063 instance=ExtResource("6_ib3t1")]
+
+[node name="Win_Lose Screen" parent="." unique_id=1294610884 instance=ExtResource("7_ib3t1")]
 
 [editable path="TapeDispenserPositioner"]
