@@ -8,6 +8,7 @@ extends Node3D
 var wrapped_packages_num : int = 0
 
 signal game_was_lost
+signal game_was_won
 
 func _ready() -> void:
 	coverage_bar.spinner = spinner
@@ -23,6 +24,8 @@ func _on_package_finished_wrapping():
 	wrapped_packages_num += 1
 	timer.start()
 	if wrapped_packages_num == 3:
+		timer.pause()
 		# TODO: Connect to framework to cycle to next screen
 		print('win game')
+		game_was_won.emit()
 		#get_tree().quit()

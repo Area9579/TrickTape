@@ -15,6 +15,9 @@ func _ready() -> void:
 func start():
 	timer.start(PACKAGE_TIME)
 
+func pause():
+	timer.paused = true
+
 func _process(_delta: float) -> void:
 	progress_bar.value = timer.time_left
 

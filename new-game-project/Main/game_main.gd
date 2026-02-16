@@ -9,6 +9,7 @@ extends Node
 
 func _ready() -> void:
 	main.game_was_lost.connect(lost_game)
+	main.game_was_won.connect(won_game)
 	Input.set_custom_mouse_cursor(load("res://Cursor/carrot cursor.png"))
 
 
@@ -21,4 +22,11 @@ func lost_game() -> void:
 	tweenie.tween_property(blood_2, "modulate", Color.WHITE, 1.0)
 	await win_lose_screen.lost_anim_finished
 	Input.set_custom_mouse_cursor(null)
-	print('done')
+	print('move on to next game')
+
+
+func won_game() -> void:
+	win_lose_screen.won()
+	await win_lose_screen.win_anim_finished
+	Input.set_custom_mouse_cursor(null)
+	print('move on to next game')

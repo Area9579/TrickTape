@@ -34,6 +34,7 @@ class_name WinLoseScreen extends Control
 #endregion
 
 signal lost_anim_finished
+signal win_anim_finished
 
 func won() -> void:
 	await get_tree().create_timer(1).timeout
@@ -44,6 +45,10 @@ func won() -> void:
 	await win_background_effect.tween.finished
 	whimsy.show()
 	stamp_effect.do_tween_from_values(whimsy.position, 60, Vector2(10,10))
+	await stamp_effect.tween.finished
+	
+	await get_tree().create_timer(1.0).timeout
+	win_anim_finished.emit()
 
 
 func lost() -> void:
