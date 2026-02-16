@@ -6,21 +6,21 @@
 
 [node name="TapeDispenserPositioner" type="Node3D" unique_id=1603529063 node_paths=PackedStringArray("tape_dispenser")]
 script = ExtResource("1_7c4af")
-tape_dispenser = NodePath("Down/TapeDispenser")
+tape_dispenser = NodePath("Left/TapeDispenser")
 
 [node name="Left" type="Marker3D" parent="." unique_id=1041362808]
 transform = Transform3D(-0.72683835, 0, -0.68680847, 0, 1, 0, 0.68680847, 0, -0.72683835, -0.5843027, 0, 0.5734029)
+
+[node name="TapeDispenser" parent="Left" unique_id=100595719 instance=ExtResource("1_v4nkt")]
 
 [node name="Right" type="Marker3D" parent="." unique_id=1922111938]
 transform = Transform3D(0.79828876, 0, -0.60227495, 0, 1, 0, 0.60227495, 0, 0.79828876, 0.520829, 0, 0.5656295)
 
 [node name="Up" type="Marker3D" parent="." unique_id=62026874]
-transform = Transform3D(0.01348341, -0.03369899, -0.9993411, 0.74736017, 0.6643049, -0.012317552, 0.6642823, -0.7467016, 0.034142382, 0, 0.45275575, 0.58211315)
+transform = Transform3D(0.013410717, 0.99988717, 0.006767457, 0.7977433, -0.014779599, 0.6028161, 0.6028481, -0.0026855846, -0.79785144, 0, 0.45275575, 0.58211315)
 
 [node name="Down" type="Marker3D" parent="." unique_id=14351774]
-transform = Transform3D(-0.0028274462, -1.6328008e-10, -0.999996, -0.7575164, 0.6528126, 0.0021418452, 0.65281, 0.75751936, -0.0018457922, 0, -0.5665971, 0.5641581)
-
-[node name="TapeDispenser" parent="Down" unique_id=100595719 instance=ExtResource("1_v4nkt")]
+transform = Transform3D(0.03971657, -0.9987294, 0.031024355, -0.7530105, -0.05032531, -0.6560813, 0.6568089, 0.0026955828, -0.7540524, 0, -0.5665971, 0.5641581)
 
 [node name="VisualsContainer" type="Node" parent="." unique_id=178606531]
 

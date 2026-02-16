@@ -4,6 +4,9 @@ extends Sprite3D
 @onready var tween : Tween = get_tree().create_tween()
 
 func _input(event: InputEvent) -> void:
+	if !visible:
+		decrease_opacity()
+		return
 	if event is not InputEventMouseMotion:
 		decrease_opacity()
 		return
