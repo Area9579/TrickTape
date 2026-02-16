@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cn4d1ulss6go1"]
+
+[ext_resource type="Texture2D" uid="uid://b5sq2eledml70" path="res://Background/Assets/Warioware background.png" id="2_0imiu"]
+
+[node name="ParallaxBackground" type="Parallax2D" unique_id=1583370283]
+z_index = -20
+repeat_size = Vector2(515, 480)
+autoscroll = Vector2(-40, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=767060244]
+scale = Vector2(5, 5)
+texture = ExtResource("2_0imiu")

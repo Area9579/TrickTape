@@ -5,6 +5,11 @@
 [ext_resource type="Script" uid="uid://cv1tqomq6d35i" path="res://Effect Components/node2D_effect.gd" id="3_aabum"]
 [ext_resource type="Texture2D" uid="uid://il68s75rgxnp" path="res://Win Lose UI/Assets/cloud.png" id="4_5sqgv"]
 [ext_resource type="Texture2D" uid="uid://bqtwca7juvwei" path="res://Win Lose UI/Assets/whimsy.png" id="5_te5r4"]
+[ext_resource type="Texture2D" uid="uid://bg6umg32rybuk" path="res://Win Lose UI/Assets/lose.png" id="6_5sqgv"]
+[ext_resource type="Texture2D" uid="uid://cgn086h7wa75f" path="res://Win Lose UI/Assets/lose_background.png" id="7_oxwul"]
+[ext_resource type="Texture2D" uid="uid://b8j431dfbwqo8" path="res://Win Lose UI/Assets/slash_1.png" id="8_h2vue"]
+[ext_resource type="Texture2D" uid="uid://ciyc5x8k7488x" path="res://Win Lose UI/Assets/slash_2.png" id="9_4bgr5"]
+[ext_resource type="Texture2D" uid="uid://tkwb15dew2l8" path="res://Win Lose UI/Assets/slash_3.png" id="10_2l805"]
 
 [node name="Win_Lose Screen" type="Control" unique_id=1294610884]
 layout_mode = 3
@@ -64,4 +69,77 @@ scale_amount = Vector2(5, 5)
 trans_type = 9
 ease_type = 1
 tween_duration = 0.6
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="LoseSprite" type="Sprite2D" parent="." unique_id=1111527764]
+visible = false
+z_index = 4
+scale = Vector2(5, 5)
+texture = ExtResource("6_5sqgv")
+
+[node name="Grow" type="Node" parent="LoseSprite" unique_id=1229713891 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+scale_amount = Vector2(5, 5)
+trans_type = 10
+ease_type = 1
+tween_duration = 0.4
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="LoseBackground" type="Sprite2D" parent="." unique_id=1895133413]
+visible = false
+z_index = 3
+scale = Vector2(5, 5)
+texture = ExtResource("7_oxwul")
+
+[node name="Grow" type="Node" parent="LoseBackground" unique_id=771227346 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+position_amount = Vector2(0, 0)
+scale_amount = Vector2(5, 5)
+trans_type = 6
+ease_type = 1
+tween_duration = 0.8
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="Slash1" type="Sprite2D" parent="." unique_id=1172066452]
+visible = false
+z_index = 1
+scale = Vector2(5, 5)
+texture = ExtResource("8_h2vue")
+
+[node name="Grow" type="Node" parent="Slash1" unique_id=1228952661 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+scale_amount = Vector2(5, 5)
+trans_type = 6
+tween_duration = 0.2
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="Slash2" type="Sprite2D" parent="." unique_id=1297226855]
+visible = false
+z_index = 1
+scale = Vector2(5, 5)
+texture = ExtResource("9_4bgr5")
+
+[node name="Grow" type="Node" parent="Slash2" unique_id=1901931147 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+scale_amount = Vector2(5, 5)
+trans_type = 6
+tween_duration = 0.2
+metadata/_custom_type_script = "uid://cv1tqomq6d35i"
+
+[node name="Slash3" type="Sprite2D" parent="." unique_id=1001463333]
+visible = false
+z_index = 1
+scale = Vector2(5, 5)
+texture = ExtResource("10_2l805")
+
+[node name="Grow" type="Node" parent="Slash3" unique_id=1687460369 node_paths=PackedStringArray("affected_node")]
+script = ExtResource("3_aabum")
+affected_node = NodePath("..")
+scale_amount = Vector2(5, 5)
+trans_type = 6
+tween_duration = 0.2
 metadata/_custom_type_script = "uid://cv1tqomq6d35i"

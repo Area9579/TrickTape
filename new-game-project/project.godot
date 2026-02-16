@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Trick Tape"
-run/main_scene="uid://ekvt1amehlo"
+run/main_scene="uid://bacfuumfu1hnl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [file_customization]
 
 folder_colors={
+"res://IntroductionScreen/Assets/": "purple",
 "res://Win Lose UI/Assets/": "purple"
 }
 
