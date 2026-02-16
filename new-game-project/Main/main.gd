@@ -7,6 +7,8 @@ extends Node3D
 
 var wrapped_packages_num : int = 0
 
+signal game_was_lost
+
 func _ready() -> void:
 	coverage_bar.spinner = spinner
 	spinner.package_finished_wrapping.connect(_on_package_finished_wrapping)
@@ -14,6 +16,7 @@ func _ready() -> void:
 	spinner.package_finished_wrapping.connect(tape_dispenser_positioner.set_new_dispenser_location)
 
 func _on_player_died():
+	game_was_lost.emit()
 	print('player died')
 
 func _on_package_finished_wrapping():

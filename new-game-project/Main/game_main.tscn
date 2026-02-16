@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dr5mvquwuwk6a"]
 
 [ext_resource type="PackedScene" uid="uid://ekvt1amehlo" path="res://Main/main.tscn" id="1_kc4fe"]
+[ext_resource type="Script" uid="uid://rh8uhaifh28m" path="res://Main/game_main.gd" id="1_me4ut"]
 [ext_resource type="PackedScene" uid="uid://cn4d1ulss6go1" path="res://Background/parallax_background.tscn" id="2_me4ut"]
 [ext_resource type="PackedScene" uid="uid://8rq22ypuy8ne" path="res://Win Lose UI/win_lose_screen.tscn" id="3_pqao7"]
 [ext_resource type="PackedScene" uid="uid://dolswgag5s7d7" path="res://IntroductionScreen/introduction_screen.tscn" id="4_csl6d"]
 
 [node name="GameMain" type="Node" unique_id=1179777259]
+script = ExtResource("1_me4ut")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1017227345]
 anchors_preset = 15
