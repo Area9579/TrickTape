@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gymcjw4ajfdb"
+path="res://.godot/imported/objectgrab.ogg-f16374feb3222d6ab2fb80b022567630.oggvorbisstr"
+
+[deps]
+
+source_file="res://Package Spinner/objectgrab.ogg"
+dest_files=["res://.godot/imported/objectgrab.ogg-f16374feb3222d6ab2fb80b022567630.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
