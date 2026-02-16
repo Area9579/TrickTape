@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://csb4nk17rdv1n" path="res://Main/main.gd" id="1_k3v36"]
 [ext_resource type="PackedScene" uid="uid://byw16m8d51wrn" path="res://Package Spinner/spinner.tscn" id="1_yh5la"]
-[ext_resource type="PackedScene" uid="uid://bbnhk1576kmjl" path="res://Package/Package.tscn" id="3_eunhr"]
 [ext_resource type="PackedScene" uid="uid://d2owqylhcsx4k" path="res://Coverage Bar/CoverageBar.tscn" id="4_eunhr"]
 [ext_resource type="PackedScene" uid="uid://bwv3l5cugrxkf" path="res://Tape Dispenser/TapeDispenserPositioner.tscn" id="6_ib3t1"]
 [ext_resource type="PackedScene" uid="uid://cllha1cynus8d" path="res://Timer/Timer.tscn" id="6_liyct"]
@@ -11,11 +10,8 @@
 [node name="Main" type="Node3D" unique_id=2065298038]
 script = ExtResource("1_k3v36")
 
-[node name="Spinner" parent="." unique_id=1415344120 node_paths=PackedStringArray("package", "tape_dispenser") instance=ExtResource("1_yh5la")]
-package = NodePath("Package")
+[node name="Spinner" parent="." unique_id=1415344120 node_paths=PackedStringArray("tape_dispenser") instance=ExtResource("1_yh5la")]
 tape_dispenser = NodePath("../TapeDispenserPositioner/Down/TapeDispenser")
-
-[node name="Package" parent="Spinner" unique_id=612296517 instance=ExtResource("3_eunhr")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=481585423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.063638, 0.9595504)
